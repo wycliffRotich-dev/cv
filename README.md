@@ -32,7 +32,7 @@ An open-source control plane that schedules AI workloads across compute nodes, g
 | **Security** | Scoped API keys, tenant-scoped data access, hardened containers (non-root, read-only filesystem, dropped capabilities) checked in CI |
 | **Rigor** | 68 architecture decision records, with a test written before every fix |
 
-[Code](https://github.com/wycliffRotich-dev/aethergrid) &nbsp;|&nbsp; [Live dashboard](https://aethergrid-dashboard.onrender.com/)
+[![Code](https://img.shields.io/badge/Code-4F46E5?style=for-the-badge&logo=github&logoColor=white)](https://github.com/wycliffRotich-dev/aethergrid) [![Live Dashboard](https://img.shields.io/badge/Live%20Dashboard-4F46E5?style=for-the-badge&logo=render&logoColor=white)](https://aethergrid-dashboard.onrender.com/)
 
 ## Stack
 
