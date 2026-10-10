@@ -32,9 +32,15 @@ An open-source control plane that schedules AI workloads across compute nodes, g
 | **Security** | Scoped API keys, tenant-scoped data access, hardened containers (non-root, read-only filesystem, dropped capabilities) checked in CI |
 | **Rigor** | 68 architecture decision records, with a test written before every fix |
 
+<div align="center">
+
 [![Code](https://img.shields.io/badge/Code-4F46E5?style=for-the-badge&logo=github&logoColor=white)](https://github.com/wycliffRotich-dev/aethergrid) [![Live Dashboard](https://img.shields.io/badge/Live%20Dashboard-4F46E5?style=for-the-badge&logo=render&logoColor=white)](https://aethergrid-dashboard.onrender.com/)
 
+</div>
+
 ## Stack
+
+<div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
@@ -47,6 +53,8 @@ An open-source control plane that schedules AI workloads across compute nodes, g
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Kafka](https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+
+</div>
 
 ## Experience at a glance
 
