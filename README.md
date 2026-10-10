@@ -73,6 +73,6 @@ An open-source control plane that schedules AI workloads across compute nodes, g
 
 <div align="center">
 
-[![Email](https://img.shields.io/badge/Email-4F46E5?style=for-the-badge&logo=gmail&logoColor=white)](mailto:celestinerotich969@gmail.com) [![LinkedIn](https://img.shields.io/badge/LinkedIn-4F46E5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rotichkipleting/) [![WhatsApp](https://img.shields.io/badge/WhatsApp-4F46E5?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/254745275288)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:celestinerotich969@gmail.com) [![LinkedIn](https://img.shields.io/badge/LinkedIn-1E3A8A?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rotichkipleting/) [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/254745275288)
 
 </div>
