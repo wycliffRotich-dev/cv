@@ -6,21 +6,23 @@
 
 Nairobi, Kenya (UTC+3) &nbsp;|&nbsp; Open to remote roles &nbsp;|&nbsp; Available to start immediately
 
-[![Resume PDF](https://img.shields.io/badge/Resume-Download%20PDF-F5A524?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](./Wycliffe_Kipleting_Rotich_Resume_Public.pdf)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-rotichkipleting-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rotichkipleting/)
-[![Email](https://img.shields.io/badge/Email-Get%20in%20touch-0A1020?style=for-the-badge&logo=gmail&logoColor=white)](mailto:celestinerotich969@gmail.com)
+[![Resume PDF](https://img.shields.io/badge/Resume-Download%20PDF-4F46E5?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](./Wycliffe_Kipleting_Rotich_Resume_Public.pdf)
 
 </div>
 
+<div align="center">
+
 ![Resume preview](./assets/resume-preview.png)
 
-## About
+</div>
+
+<h2 align="center">About</h2>
 
 I build backend and distributed systems where concurrency failures cost real money. Seven-plus years across the Kenya Revenue Authority (national-scale revenue systems) and Toyota (cloud platforms for vehicle telematics), now building AetherGrid, an open-source orchestrator for AI workloads.
 
 My focus: **concurrency, race-condition debugging, execution ownership and failure recovery.**
 
-## Featured project: AetherGrid
+<h2 align="center">Featured project: AetherGrid</h2>
 
 An open-source control plane that schedules AI workloads across compute nodes, guarantees exclusive execution ownership under failure, and gives operators one authenticated console.
 
@@ -38,7 +40,7 @@ An open-source control plane that schedules AI workloads across compute nodes, g
 
 </div>
 
-## Stack
+<h2 align="center">Stack</h2>
 
 <div align="center">
 
@@ -56,7 +58,7 @@ An open-source control plane that schedules AI workloads across compute nodes, g
 
 </div>
 
-## Experience at a glance
+<h2 align="center">Experience at a glance</h2>
 
 | Period | Role | Where |
 |---|---|---|
@@ -67,6 +69,10 @@ An open-source control plane that schedules AI workloads across compute nodes, g
 
 **Education:** MSc Computer Science, USIU-Africa (2022 to 2024). BEng Computer Software Engineering, Technical University of Kenya (2018).
 
-## Contact
+<h2 align="center">Contact</h2>
 
-Email [celestinerotich969@gmail.com](mailto:celestinerotich969@gmail.com) or message me on [LinkedIn](https://www.linkedin.com/in/rotichkipleting/).
+<div align="center">
+
+[![Email](https://img.shields.io/badge/Email-4F46E5?style=for-the-badge&logo=gmail&logoColor=white)](mailto:celestinerotich969@gmail.com) [![LinkedIn](https://img.shields.io/badge/LinkedIn-4F46E5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rotichkipleting/) [![WhatsApp](https://img.shields.io/badge/WhatsApp-4F46E5?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/254745275288)
+
+</div>
