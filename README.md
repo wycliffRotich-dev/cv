@@ -60,12 +60,16 @@ An open-source control plane that schedules AI workloads across compute nodes, g
 
 <h2 align="center">Experience at a glance</h2>
 
+<div align="center">
+
 | Period | Role | Where |
 |---|---|---|
 | 2026 to now | Founder and Platform Engineer | AetherGrid (open source) |
 | 2025 to now | LLM Technical Trainer | Mercor |
 | 2024 | Software Engineer, Cloud Platforms | Toyota |
 | 2018 to 2023 | Backend Cloud Engineer | Kenya Revenue Authority |
+
+</div>
 
 **Education:** MSc Computer Science, USIU-Africa (2022 to 2024). BEng Computer Software Engineering, Technical University of Kenya (2018).
 
