@@ -6,7 +6,7 @@
 
 Nairobi, Kenya (UTC+3) &nbsp;|&nbsp; Open to remote roles &nbsp;|&nbsp; Available to start immediately
 
-[![Resume PDF](https://img.shields.io/badge/Resume-Download%20PDF-4F46E5?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](./Wycliffe_Kipleting_Rotich_Resume_Public.pdf)
+[![Resume PDF](https://img.shields.io/badge/Resume-Download%20PDF-4F46E5?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](./Wycliffe_Kipleting_Rotich_Resume_Public.pdf) [![Live CV](https://img.shields.io/badge/Live%20CV-Open%20Web%20Version-4F46E5?style=for-the-badge&logo=githubpages&logoColor=white)](https://wycliffrotich-dev.github.io/cv/)
 
 </div>
 
