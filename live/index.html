@@ -44,14 +44,43 @@
       justify-content: space-between; margin-bottom: 16px;
     }
     .toolbar .note { color: var(--muted); font-size: 14px; margin: 0; }
-    button#download {
-      appearance: none; border: 0; cursor: pointer;
-      background: var(--accent); color: #fff; font: inherit; font-weight: 600;
-      padding: 12px 22px; border-radius: 8px;
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn {
+      --g1: #4f46e5; --g2: #2563eb; --g3: #06b6d4;
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      appearance: none; border: 0; cursor: pointer; text-decoration: none;
+      font: inherit; font-weight: 600; letter-spacing: .01em; line-height: 1;
+      padding: 14px 28px; border-radius: 999px;
+      transition: transform .18s ease, box-shadow .18s ease, background-position .45s ease, background-color .18s ease, opacity .18s ease;
     }
-    @media (prefers-color-scheme: dark) { button#download { color: #0d1218; } }
-    button#download:disabled { opacity: .55; cursor: default; }
-    button#download:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(110deg, var(--g1), var(--g2) 45%, var(--g3));
+      background-size: 180% 100%;
+      box-shadow: 0 10px 26px -8px rgba(37, 99, 235, .65), inset 0 1px 0 rgba(255, 255, 255, .28);
+    }
+    .btn-primary::before {
+      content: ""; width: 18px; height: 18px; background: currentColor;
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v12m0 0l-5-5m5 5l5-5M5 21h14'/%3E%3C/svg%3E") center / contain no-repeat;
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v12m0 0l-5-5m5 5l5-5M5 21h14'/%3E%3C/svg%3E") center / contain no-repeat;
+    }
+    .btn-primary:hover:not(:disabled) {
+      transform: translateY(-2px); background-position: 100% 0;
+      box-shadow: 0 16px 32px -8px rgba(6, 182, 212, .6), inset 0 1px 0 rgba(255, 255, 255, .35);
+    }
+    .btn-primary:active:not(:disabled) { transform: translateY(0) scale(.98); }
+    .btn-primary:disabled { opacity: .65; cursor: progress; }
+    .btn-ghost {
+      color: var(--accent); background: transparent;
+      border: 1.5px solid var(--accent); padding: 12.5px 26px;
+    }
+    .btn-ghost:hover { background: var(--accent-soft); transform: translateY(-2px); }
+    .btn-ghost:active { transform: translateY(0) scale(.98); }
+    .btn:focus-visible, a:focus-visible { outline: 3px solid var(--g3, var(--accent)); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) {
+      .btn { transition: none; }
+      .btn:hover:not(:disabled) { transform: none; }
+    }
     .status { font-size: 13px; padding: 8px 12px; border-radius: 6px; margin: 0 0 16px; background: var(--card); border: 1px solid var(--line); color: var(--muted); }
     .status.ok { border-left: 4px solid var(--ok); }
     .status.warn { border-left: 4px solid var(--warn); color: var(--warn); }
@@ -90,6 +119,8 @@
       .metrics { grid-template-columns: repeat(2, 1fr); }
       .skills { grid-template-columns: 1fr; }
       .skills dd { margin-bottom: 6px; }
+      .actions { width: 100%; }
+      .btn { flex: 1 1 100%; }
     }
     @media print {
       body { background: #fff; color: #000; }
@@ -102,11 +133,13 @@
   <div class="wrap">
     <div class="toolbar">
       <p class="note">This page reads current figures from the AetherGrid repository each time you download.</p>
-      <button id="download" type="button" disabled>Download PDF</button>
+      <div class="actions">
+        <button id="download" class="btn btn-primary" type="button" disabled>Download PDF</button>
+        <a id="repo-link" class="btn btn-ghost" href="https://github.com/wycliffRotich-dev/aethergrid" rel="noopener">View AetherGrid on GitHub</a>
+      </div>
     </div>
     <p id="status" class="status">Reading current AetherGrid figures...</p>
     <main id="resume"><noscript>This page needs JavaScript to show the resume and build the PDF.</noscript>Loading...</main>
-    <footer class="page"><a id="repo-link" href="https://github.com/wycliffRotich-dev/aethergrid" rel="noopener">View AetherGrid on GitHub</a></footer>
   </div>
   <script src="vendor/pdfmake.min.js"></script>
   <script src="vendor/vfs_fonts.js"></script>
