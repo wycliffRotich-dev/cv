@@ -1,0 +1,57 @@
+name: Build live resume
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-resume
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install reportlab pillow
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+
+      - name: Fetch live stats from AetherGrid
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python build/fetch_stats.py
+
+      - name: Build PDF, web page and preview image
+        run: |
+          python build/render_pdf.py
+          python build/render_html.py
+          python build/make_preview.py
+
+      - name: Commit changes (only if something changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stats index.html assets/resume-preview.png Wycliffe_Kipleting_Rotich_Resume_Public.pdf
+          if git diff --cached --quiet; then
+            echo "Nothing changed. No commit."
+          else
+            git commit -m "chore: rebuild resume with live stats"
+            git pull --rebase origin main
+            git push
+          fi
