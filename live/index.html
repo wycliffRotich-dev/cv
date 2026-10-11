@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wycliffe Kipleting Rotich - Resume</title>
+  <meta name="description" content="Platform engineer in Nairobi. Resume with current AetherGrid figures. Download a fresh PDF at any time.">
+  <style>
+    :root {
+      --accent: #1f4e79;
+      --accent-soft: #e8f0f7;
+      --ink: #1c1c1c;
+      --muted: #5a6470;
+      --line: #d9dee3;
+      --bg: #f3f5f7;
+      --card: #ffffff;
+      --ok: #1b6b3a;
+      --warn: #8a5a00;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --accent: #7fb3e6;
+        --accent-soft: #1d2b3a;
+        --ink: #e8eaed;
+        --muted: #a0a8b2;
+        --line: #2d3640;
+        --bg: #12171c;
+        --card: #1a2128;
+        --ok: #6fcf97;
+        --warn: #e0b04a;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 24px 16px 56px; }
+    .toolbar {
+      display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: center;
+      justify-content: space-between; margin-bottom: 16px;
+    }
+    .toolbar .note { color: var(--muted); font-size: 14px; margin: 0; }
+    button#download {
+      appearance: none; border: 0; cursor: pointer;
+      background: var(--accent); color: #fff; font: inherit; font-weight: 600;
+      padding: 12px 22px; border-radius: 8px;
+    }
+    @media (prefers-color-scheme: dark) { button#download { color: #0d1218; } }
+    button#download:disabled { opacity: .55; cursor: default; }
+    button#download:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+    .status { font-size: 13px; padding: 8px 12px; border-radius: 6px; margin: 0 0 16px; background: var(--card); border: 1px solid var(--line); color: var(--muted); }
+    .status.ok { border-left: 4px solid var(--ok); }
+    .status.warn { border-left: 4px solid var(--warn); color: var(--warn); }
+    #resume { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 36px 40px; }
+    .head h1 { margin: 0; font-size: 34px; line-height: 1.15; letter-spacing: -.01em; }
+    .headline { margin: 4px 0 2px; color: var(--accent); font-weight: 600; font-size: 18px; }
+    .avail { margin: 0 0 8px; color: var(--muted); font-size: 14px; }
+    .contact { margin: 0; font-size: 14px; }
+    .contact a { color: var(--accent); text-decoration: none; }
+    .contact a:hover { text-decoration: underline; }
+    .sep { color: var(--muted); }
+    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 22px 0 6px; }
+    .metric { background: var(--accent-soft); border-radius: 10px; padding: 12px 12px 10px; position: relative; }
+    .metric .value { font-size: 20px; font-weight: 700; color: var(--accent); line-height: 1.2; }
+    .metric .label { font-size: 12.5px; color: var(--muted); margin-top: 2px; line-height: 1.35; }
+    .badge { position: absolute; top: 8px; right: 8px; font-size: 10px; text-transform: uppercase; letter-spacing: .06em; padding: 1px 6px; border-radius: 99px; }
+    .badge.live { background: var(--ok); color: #fff; }
+    .badge.saved { background: var(--warn); color: #fff; }
+    .block { margin-top: 26px; }
+    .block h2 { margin: 0 0 8px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 4px; }
+    .summary { margin: 0; }
+    .skills { display: grid; grid-template-columns: 170px 1fr; gap: 4px 14px; margin: 0; font-size: 15px; }
+    .skills dt { font-weight: 600; }
+    .skills dd { margin: 0; }
+    .job { margin-top: 16px; }
+    .jobtop { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; align-items: baseline; }
+    .job h3 { margin: 0; font-size: 16.5px; }
+    .dates { color: var(--muted); font-size: 14px; white-space: nowrap; }
+    .org { margin: 0 0 4px; color: var(--muted); font-size: 14.5px; }
+    .job ul { margin: 4px 0 0; padding-left: 20px; }
+    .job li { margin: 0 0 5px; font-size: 15px; }
+    footer.page { margin-top: 18px; font-size: 13px; color: var(--muted); text-align: center; }
+    footer.page a { color: var(--accent); }
+    @media (max-width: 720px) {
+      #resume { padding: 24px 18px; }
+      .metrics { grid-template-columns: repeat(2, 1fr); }
+      .skills { grid-template-columns: 1fr; }
+      .skills dd { margin-bottom: 6px; }
+    }
+    @media print {
+      body { background: #fff; color: #000; }
+      .toolbar, .status, footer.page, .badge { display: none; }
+      #resume { border: 0; padding: 0; background: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="toolbar">
+      <p class="note">This page reads current figures from the AetherGrid repository each time you download.</p>
+      <button id="download" type="button" disabled>Download PDF</button>
+    </div>
+    <p id="status" class="status">Reading current AetherGrid figures...</p>
+    <main id="resume"><noscript>This page needs JavaScript to show the resume and build the PDF.</noscript>Loading...</main>
+    <footer class="page"><a id="repo-link" href="https://github.com/wycliffRotich-dev/aethergrid" rel="noopener">View AetherGrid on GitHub</a></footer>
+  </div>
+  <script src="vendor/pdfmake.min.js"></script>
+  <script src="vendor/vfs_fonts.js"></script>
+  <script src="resume-pdf.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
