@@ -32,7 +32,15 @@ An open-source control plane that schedules AI workloads across compute nodes, g
 | **Scheduling** | Best-fit placement across CPU, memory and VRAM, with node draining |
 | **Resilience** | Reconciliation of dead workers and expired leases. Outage latency on an unrelated endpoint cut from about 29 s to 0.124 s |
 | **Security** | Scoped API keys, tenant-scoped data access, hardened containers (non-root, read-only filesystem, dropped capabilities) checked in CI |
-| **Rigor** | 68 architecture decision records, with a test written before every fix |
+| **Rigor** | Written architecture decision records and a test for every fix (live counts below) |
+
+<div align="center">
+
+<sub><b>LIVE FROM THE AETHERGRID REPO</b></sub>
+
+[![Tests](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/wycliffRotich-dev/4b35dff5cea5aa68433713c36c3108bb/raw/aethergrid-test-badge.json&style=flat-square)](https://github.com/wycliffRotich-dev/aethergrid/actions) [![ADRs](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wycliffRotich-dev/cv/main/stats/adrs.json&style=flat-square)](https://github.com/wycliffRotich-dev/aethergrid/tree/main/docs/adr) [![Commits](https://img.shields.io/github/commit-activity/t/wycliffRotich-dev/aethergrid?style=flat-square&label=commits&color=4F46E5)](https://github.com/wycliffRotich-dev/aethergrid/commits/main) [![Last commit](https://img.shields.io/github/last-commit/wycliffRotich-dev/aethergrid?style=flat-square&color=4F46E5)](https://github.com/wycliffRotich-dev/aethergrid)
+
+</div>
 
 <div align="center">
 

@@ -1,0 +1,43 @@
+name: Update live stats
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out cv repo
+        uses: actions/checkout@v4
+
+      - name: Count ADRs in AetherGrid
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          COUNT=$(gh api repos/wycliffRotich-dev/aethergrid/contents/docs/adr \
+            --jq '[.[] | select(.name | test("^[0-9]{4}-.*\\.md$"))] | length')
+          if ! [[ "$COUNT" =~ ^[0-9]+$ ]] || [ "$COUNT" -lt 1 ]; then
+            echo "::error::Unexpected ADR count: $COUNT"
+            exit 1
+          fi
+          mkdir -p stats
+          printf '{"schemaVersion":1,"label":"ADRs","message":"%s","color":"blueviolet"}\n' "$COUNT" > stats/adrs.json
+          cat stats/adrs.json
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stats/adrs.json
+          if git diff --cached --quiet; then
+            echo "No change"
+          else
+            git commit -m "chore: update live ADR count"
+            git push
+          fi
